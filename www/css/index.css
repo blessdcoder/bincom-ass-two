@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    font-family: "Mali", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-image:linear-gradient(to bottom, #A7A7A7 0%, #E4E4E4 51%);
+    height:100vh;
+    margin:0px;
+    padding:0px;
+    /* Padding to avoid the "unsafe" areas behind notches in the screen */
+    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+    width:100%;
+}
+
+/* Portrait layout (default) */
+
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+.about{
+    padding: 0 80px;
+}
+
+article img{
+    height: 200px;
+    width: 200px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin-top: 30px;
+}
+
+article h1{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+article h1::after{
+    content: " ";
+    height: 5px;
+    width: 225px;
+    background-color: #fff;
+    display: block;
+    margin: auto;
+}
+
+article p{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+blockquote{
+    font-size: 15px;
+    margin-top: 24px;
+    margin-bottom: 30px;
+}
+
+.section{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10px;
+}
+
+.section .skills h2::after{
+    content: " ";
+    height: 5px;
+    width: 65px;
+    background-color: #fff;
+    display: block;
+    margin: auto;
+}
+
+.section .education h2::after{
+    content: " ";
+    height: 5px;
+    width: 105px;
+    background-color: #fff;
+    display: block;
+    margin: auto;
+}
+
+.section .skills h2{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.section .education h2{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.section .skills ul li{
+    font-size: 14px;
+    text-align: left;
+}
+
+.section .education ul li{
+    text-align: left;
+    font-size: 14px;
+}
+
+.section .divider{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 2px;
+    height: 100px;
+    background-color: #585858;
+}
+
+.button{
+    position: relative;
+    padding: 10px 22px;
+    color: #1B1B1B;
+    border-radius: 6px;
+    background: #fff;
+    border: none;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.button:active{
+    transform: scale(0.96);
+}
+
+.button:active:hover{
+    background: #ced2fc;
+}
+
+#geolocation{
+    font-size: 14px;
+}
+
+.socials{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.socials a{
+    font-size: 18px;
+}
+
+.fa-square-phone{
+    color: #29b474;
+}
+
+.fa-envelope{
+    color: red;
+}
+
+.fa-linkedin{
+    color: #0a66c2;
+}
+
+.fa-square-github{
+    color: black;
+}
+
+.fa-square-instagram{
+    color: #e4405f;
+}
+
+.event {
+    border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        background-image:linear-gradient(to bottom, #585858 0%, #1B1B1B 51%);
+    }
+}
+
+@media (max-width: 768px) {
+    article img{
+        height: 150px;
+        width: 150px;
+    }
+
+    article h1{
+        font-size: 20px;
+    }
+
+    article p{
+        font-size: 14px;
+    }
+
+    blockquote{
+        font-size: 12px;
+    }
+
+    .section .skills h2{
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .section .education h2{
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .section .skills ul li{
+        font-size: 12px;
+        text-align: left;
+    }
+
+    .section  .education ul li{
+        text-align: left;
+        font-size: 12px;
+    }
+
+    .socials a{
+        font-size: 24px;
+    }
+
+    .link-title{
+        display: none !important;
+    }
+
+    #geolocation{
+        font-size: 12px;
+    }
+}
